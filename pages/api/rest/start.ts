@@ -18,7 +18,7 @@ export default async function handler(
   const diffSeconds = differenceInSeconds(startAt, lastRan);
   console.log({ diffSeconds });
   if (diffSeconds < 30) {
-    res.status(400).json({
+    res.status(200).json({
       step: "start",
       success: 0,
       message: "Ran too soon.",
