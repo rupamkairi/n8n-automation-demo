@@ -7,10 +7,10 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const { cron_key } = req.query;
-  if (cron_key !== process.env.CRON_KEY) {
-    res.status(401).json({ error: "Unauthorized" });
-    return;
-  }
+  // if (cron_key !== process.env.CRON_KEY) {
+  //   res.status(401).json({ error: "Unauthorized" });
+  //   return;
+  // }
 
   const startAt: Date = new Date(req.query.startAt as string);
   const lastRan = new Date((await getLastRan()) as string);
