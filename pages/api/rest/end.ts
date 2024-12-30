@@ -11,7 +11,9 @@ export default async function handler(
   }
 
   res.status(200).json({
-    name: "John Doe",
+    step: "end",
+    success: 1,
+    message: "Completed Successfully.",
     datetime: new Date().toISOString(),
   });
   return;
